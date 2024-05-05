@@ -62,7 +62,7 @@ class BookmarkAdapter : ListAdapter<ImageDocumentEntity, BookmarkAdapter.Bookmar
         holder.bind(item)
     }
 
-    
+
     fun removeItem(position: Int) {
         val newList = currentList.toMutableList()
 

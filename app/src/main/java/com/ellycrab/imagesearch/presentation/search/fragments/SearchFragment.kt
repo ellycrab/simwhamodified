@@ -104,8 +104,6 @@ class SearchFragment : Fragment(),ImgAdapter.OnSwitchStateChangeListener {
 
         }
 
-        // BookmarkAdapter.OnSwitchStateChangeListener2 인터페이스 구현
-
     }
 
 
