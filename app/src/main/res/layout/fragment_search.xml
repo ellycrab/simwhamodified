@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="9"
+    android:orientation="vertical"
+    tools:context=".presentation.search.fragments.SearchFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+       <FrameLayout
+           android:id="@+id/imageSearch"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:background="@color/gray"
+           tools:ignore="MissingConstraints">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:id="@+id/topsearch"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+               <EditText
+                   android:id="@+id/imgSearch"
+                   android:layout_width="250dp"
+                   android:layout_height="40dp"
+                   android:layout_marginTop="20dp"
+                   android:paddingStart="10dp"
+                   android:background="@drawable/rounded_edittext_background"
+                   android:textSize="20sp"
+                   android:layout_marginBottom="20dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toStartOf="@id/imgSrcBtn"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+
+               <Button
+                   android:id="@+id/imgSrcBtn"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/search"
+                   android:textSize="10sp"
+                   android:backgroundTint="#2196F3"
+                   app:layout_constraintBottom_toBottomOf="@+id/imgSearch"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toEndOf="@+id/imgSearch"
+                   app:layout_constraintTop_toTopOf="@+id/imgSearch" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+       </FrameLayout>
+
+       <LinearLayout
+           android:id="@+id/countLinear"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center_vertical"
+           android:orientation="horizontal"
+           android:padding="8dp"
+           app:layout_constraintTop_toBottomOf="@+id/imageSearch">
+
+           <TextView
+               android:id="@+id/itemCountTextView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Total Items: "
+               android:textColor="@android:color/black"
+               android:textSize="16sp" />
+
+           <TextView
+               android:id="@+id/totalCountTextView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textColor="@android:color/black"
+               android:textSize="16sp" />
+       </LinearLayout>
+       <FrameLayout
+           android:id="@+id/imageSearchRs"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="8"
+           android:layout_marginBottom="60dp"
+           app:layout_constraintTop_toBottomOf="@+id/imageSearch"
+           tools:ignore="MissingConstraints">
+
+
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/recyclerImg"
+               android:layout_marginTop="40dp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:visibility="visible"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               tools:listitem="@layout/imgsearchrs"/>
+
+
+       </FrameLayout>
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
