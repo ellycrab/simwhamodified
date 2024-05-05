@@ -150,11 +150,6 @@ class SearchFragment : Fragment(),ImgAdapter.OnSwitchStateChangeListener {
         }
 
 
-        // 아이템이 삭제되었을 때 스위치 상태를 false로 설정
-        if (!imageResultAdapter.currentList.contains(item)) {
-            // 아이템이 현재 리스트에 없으면 isChecked를 false로 설정하여 스위치를 끄기
-            onSwitchStateChanged(position, false)
-        }
 
     }
 
