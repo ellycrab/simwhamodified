@@ -16,10 +16,6 @@ class ImgAdapter(private val switchStateChangeListener: OnSwitchStateChangeListe
     ) {
 
 
-
-
-
-
     //이미지어댑터에서 북마크할때
     interface OnSwitchStateChangeListener {
         fun onSwitchStateChanged(position: Int, isChecked: Boolean)
@@ -42,14 +38,9 @@ class ImgAdapter(private val switchStateChangeListener: OnSwitchStateChangeListe
             val imageDocumentEntity = getItem(position) as ImageDocumentEntity
             holder.bind(imageDocumentEntity)
 
-            // 스위치 상태 변경 리스너 설정
-            holder.binding.switch1.setOnCheckedChangeListener { _, isChecked ->
-                // ImgAdapter의 리스너 호출
-                switchStateChangeListener.onSwitchStateChanged(position, isChecked)
-            }
         }
     }
-
-
-
 }
+
+
+
